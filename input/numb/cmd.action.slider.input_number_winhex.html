@@ -1,0 +1,73 @@
+<div class="cmd cmd-widget" data-type="action" data-subtype="slider" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#">
+
+<div class="input-group">
+<input id="input#id#" list="list#id#" class="form-control input-sm value execute" type="number" value=#state# min="12" max="30" data-cmd_id="#id#">
+
+  <datalist id="list#id#">
+	<option value="12.0" data-id="1">Stop</option>
+	<option value="18.0" data-id="2">Eco</option>
+	<option value="19.0" data-id="3">Nuit</option>
+	<option value="20.5" data-id="4">Confort</option>
+</datalist>
+</div>
+
+      <style>
+    
+[data-cmd_id="#id#"].form-control:not(.btn):not(.expressionAttr), [data-cmd_id="#id#"] input:not(.btn):not(.dial):not([type="radio"]):not([type="image"]):not(.expressionAttr):not(.knob):not([type="checkbox"]), textarea:not(.expressionAttr) {
+  background-color:#e4e2c2!important;
+  color:black!important;
+       }
+
+[data-cmd_id="#id#"].value { 
+      border-radius: 12px!important;
+    height: 30px!important;
+      width: 90px!important;
+    min-height: 30px!important;
+    max-height: 30px!important;
+    font-size : 20px!important;
+    font-weight: Bold!important;
+    text-align: left!important; 
+    }        
+
+
+</style>
+	<script>
+
+      
+        jeedom.cmd.update['#id#'] = function(_options){
+
+
+//alert(this.value); 
+          
+   // 		$('#input#id#').val(_options.display_value);
+
+          $("#input#id#").each(format_2_dec);
+  function format_2_dec() {
+    var curr_val = parseFloat($(this).val());
+    $(this).val(curr_val.toFixed(1));
+ }         
+          
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+$('.cmd[data-cmd_uid=#uid#] .execute').on("change", function () {
+        jeedom.cmd.execute({id:'#id#', value: {
+slider: '"'+this.value+'"'
+        }});
+                });
+             } else {
+$('.cmd[data-cmd_uid=#uid#]:last .execute').keypress(function( event ) {
+           if(event.which == 13) {
+            
+jeedom.cmd.execute({id:'#id#', value: {
+ // slider: $('.cmd[data-cmd_uid=#uid#] .value').val().replace("#unite#", "")
+  //         slider: '"'+this.value+'"'
+      //     slider: parseFloat($(this).val())
+slider: '"'+this.value+'"'
+
+}});
+
+           }});
+
+           }}  
+    	jeedom.cmd.update['#id#']({display_value:'#state#',valueDate:'#valueDate#',collectDate:'#collectDate#',alertLevel:'#alertLevel#'});  
+	</script>
+</div>
