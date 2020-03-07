@@ -1,4 +1,8 @@
-# widget action slider input numérique
+# WIDGET SPECIFIQUE action slider input numérique
+
+Mise à jour :
+- Le 2020/3/08 : ajjout button effacement
+- Le 2020/2/20 : conforme jeedom v4.0.43
 
 <img src="action_input_numb.gif"/>
 
