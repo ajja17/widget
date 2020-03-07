@@ -1,7 +1,7 @@
 <div class="cmd cmd-widget" data-type="action" data-subtype="slider" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#">
 
 <div class="input-group">
-<input id="input#id#" list="list#id#" class="form-control input-sm value execute" type="number" value=#state# min="12" max="30" data-cmd_id="#id#">
+<input id="input#id#" list="list#id#" class="form-control input-sm value execute" type="number" data-cmd_id="#id#">
 
   <datalist id="list#id#">
 	<option value="12.0" data-id="1">Stop</option>
@@ -39,7 +39,7 @@
 
 //alert(this.value); 
           
-   // 		$('#input#id#').val(_options.display_value);
+   		$('#input#id#').val(_options.display_value);
 
           $("#input#id#").each(format_2_dec);
   function format_2_dec() {
@@ -58,9 +58,6 @@ $('.cmd[data-cmd_uid=#uid#]:last .execute').keypress(function( event ) {
            if(event.which == 13) {
             
 jeedom.cmd.execute({id:'#id#', value: {
- // slider: $('.cmd[data-cmd_uid=#uid#] .value').val().replace("#unite#", "")
-  //         slider: '"'+this.value+'"'
-      //     slider: parseFloat($(this).val())
 slider: '"'+this.value+'"'
 
 }});
