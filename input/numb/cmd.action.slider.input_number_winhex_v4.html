@@ -2,7 +2,15 @@
 
 <div class="input-group">
 <input id="input#id#" list="list#id#" class="form-control input-sm value execute" type="number" data-cmd_id="#id#">
+<button class="clear" onclick="clearButton( this );"><div>&times;</div></button>
+     <script>
+      function clearButton( This ) {
+        var input = This.parentElement.querySelector( 'input' );
 
+        input.value = '';
+        input.focus();
+      }
+    </script>
   <datalist id="list#id#">
 	<option value="12.0" data-id="1">Stop</option>
 	<option value="18.0" data-id="2">Eco</option>
@@ -12,7 +20,15 @@
 </div>
 
       <style>
-    
+   [data-cmd_id="#id#"] button.clear {
+  outline: none;
+border-radius: 40%!important;
+    padding: 6.5% 0;
+}
+[data-cmd_id="#id#"] button.clear > div {
+ */ font-size: 26px;
+} 
+	      
 [data-cmd_id="#id#"].form-control:not(.btn):not(.expressionAttr), [data-cmd_id="#id#"] input:not(.btn):not(.dial):not([type="radio"]):not([type="image"]):not(.expressionAttr):not(.knob):not([type="checkbox"]), textarea:not(.expressionAttr) {
   background-color:#e4e2c2!important;
   color:black!important;
@@ -29,18 +45,14 @@
     text-align: left!important; 
     }        
 
-
 </style>
 	<script>
 
       
         jeedom.cmd.update['#id#'] = function(_options){
-
-
-//alert(this.value); 
-          
+  
    		$('#input#id#').val(_options.display_value);
-
+          
           $("#input#id#").each(format_2_dec);
   function format_2_dec() {
     var curr_val = parseFloat($(this).val());
@@ -56,14 +68,10 @@ slider: '"'+this.value+'"'
              } else {
 $('.cmd[data-cmd_uid=#uid#]:last .execute').keypress(function( event ) {
            if(event.which == 13) {
-            
 jeedom.cmd.execute({id:'#id#', value: {
 slider: '"'+this.value+'"'
-
 }});
-
            }});
-
            }}  
     	jeedom.cmd.update['#id#']({display_value:'#state#',valueDate:'#valueDate#',collectDate:'#collectDate#',alertLevel:'#alertLevel#'});  
 	</script>
