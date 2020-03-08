@@ -1,5 +1,8 @@
 # WIDGET SPECIFIQUE action slider input numérique
 
+Permet de renseigner une valeur numérique.
+touche "Entrée" pour une validation PC
+
 Mise à jour :
 - Le 2020/3/08 : ajjout button effacement "beta"
 - Le 2020/2/20 : conforme jeedom v4.0.43
