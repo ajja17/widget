@@ -13,7 +13,7 @@ Mise à jour :
 Screen de configuration
 <img src="curseur input clock.png"/>
 
-Utilisation
+### Utilisation
 testeur d'expression :
 ```php
 '#[input][action slider input numérique][essai clock]#' == '06:45'
@@ -31,9 +31,10 @@ Je vais évaluer : '445'
 Résultat : 445
 ```
 
+### Scenario fonction A
 
+<img src="input_clock_scenario_A.png"/>
 
-Scenario fonction A
 ```php
 str_replace(:,, #[input][action slider input numérique][essai clock]#)
 ```
