@@ -7,7 +7,7 @@ Mise à jour :
 
 - Le 2020/3/15 : conforme jeedom v4.0.43
 
-<img src="action_input_numb.gif"/>
+<img src="Input_clock~1.gif"/>
 
 
 screen de configuration
