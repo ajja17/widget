@@ -15,8 +15,11 @@ Screen de configuration
 
 Utilisation
 testeur d'expression :
-<code>'#[input][action slider input numérique][essai clock]#' == '06:45'</code>
-<quote>
-  Je vais évaluer : '06:45' == '06:45'
+```php
+#[input][action slider input numérique][essai clock]#' == '06:45'
+Je vais évaluer : '06:45' == '06:45'
 Résultat : true
-  </quote>
+```
+
+
+>  
