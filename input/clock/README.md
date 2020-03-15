@@ -20,6 +20,10 @@ testeur d'expression :
 Je vais évaluer : '06:45' == '06:45'
 Résultat : true
 ```
+```php
+'#[input][action slider input numérique][essai clock]#' == '#heure#:#minute#'
+Je vais évaluer : '06:45' == '23:56'
+Résultat : false
 
-
+```
 >  
