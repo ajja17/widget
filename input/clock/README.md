@@ -11,4 +11,4 @@ Mise à jour :
 
 
 screen de configuration
-<img src="curseur input numb.png"/>
+<img src="curseur input clock.png"/>
