@@ -10,5 +10,13 @@ Mise à jour :
 <img src="Input_clock~1.gif"/>
 
 
-screen de configuration
+Screen de configuration
 <img src="curseur input clock.png"/>
+
+Utilisation
+testeur d'expression :
+<code>'#[input][action slider input numérique][essai clock]#' == '06:45'</code>
+<quote>
+  Je vais évaluer : '06:45' == '06:45'
+Résultat : true
+  </quote>
