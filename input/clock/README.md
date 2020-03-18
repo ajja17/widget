@@ -1,4 +1,4 @@
-# WIDGET SPECIFIQUE action slider input numérique
+# WIDGET SPECIFIQUE action slider input numérique v4
 
 Permet de renseigner 2 valeurs numérique heure et minute
 touche "Entrée" pour une validation PC
