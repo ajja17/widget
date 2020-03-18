@@ -1,0 +1,50 @@
+
+ajja17orange
+Développeurs
+2 
+3h
+bonjour en v3 selon ton thèmes
+les balises class/id permetant de modifier un input peuvent être diffèrent
+
+essai ça
+
+<div class="tooltips cmd cmd-widget" data-type="action" data-subtype="slider" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" style="min-width:100px;">
+    <span class="cmdName" style="font-weight: bold;font-size : 12px;#hideCmdName#">#name_display#</span><br/>
+  <div class="input-group" style="width: 75px;">
+<input style="height: 33px;border-radius: 5px;font-size : 16px;font-weight: Bold;background-color:#e4e2c2;" class="form-control input-sm value execute" type="time" placeholder="#title_placeholder#" value="#state#" data-cmd_id="#id#">
+
+<style>
+    /* Firefox */
+input[data-cmd_id="#id#"] {
+    -moz-appearance: textfield;
+}
+
+/* Chrome */
+ input[data-cmd_id="#id#"]::-webkit-inner-spin-button,
+input[data-cmd_id="#id#"]::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+
+/* Opéra*/
+input[data-cmd_id="#id#"]::-o-inner-spin-button,
+input[data-cmd_id="#id#"]::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+    </style>
+</div>
+	<script>
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+$('.cmd[data-cmd_uid=#uid#] .execute').on("change", function () {
+        jeedom.cmd.execute({id:'#id#', value: {slider: $('.cmd[data-cmd_uid=#uid#] .value').val().replace("#unite#", "").replace(" ", "")}});
+                });
+             } else {
+$('.cmd[data-cmd_uid=#uid#]:last .execute').keypress(function( event ) {
+           if(event.which == 13) {
+        jeedom.cmd.execute({id:'#id#', value: {slider: $('.cmd[data-cmd_uid=#uid#] .value').val().replace("#unite#", "").replace(" ", "")}});
+                }});
+}
+
+	</script>
+</div>
