@@ -4,7 +4,7 @@ Permet de renseigner une valeur numérique.
 touche "Entrée" pour une validation PC
 
 Mise à jour :
-- Le 2020/3/08 : ajjout button effacement "branche beta"
+- Le 2020/3/08 : ajout boutons effacer "branche beta"
 - Le 2020/2/20 : conforme jeedom v4.0.43
 
 <img src="action_input_numb.gif"/>
