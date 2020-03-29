@@ -4,7 +4,7 @@ Permet de renseigner une valeur date.
 touche "Entrée" pour une validation PC
 
 Mise à jour :
-- Le 2020/3/30 :  conforme jeedom v4.0.43
+- Le 2020/3/30 :  conforme jeedom v4.0.45
 
 <img src="doc/action_input_date.gif"/>
 
