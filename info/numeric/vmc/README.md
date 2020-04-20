@@ -7,7 +7,9 @@ couleur = white,yellow,orange,red
 vitesse = 0,1,2,3
 
 ### Création de commande
+<img src="Doc/fan_classic.png"/>
 
+mode avancé (valeur à configurer en paramètres optionnels
 <img src="Doc/fan.png"/>
 
 ### Paramètres Optionnels
