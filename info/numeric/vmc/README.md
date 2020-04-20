@@ -1,6 +1,6 @@
 # WIDGET SPECIFIQUE info numeric VMC
 
-<img src="Doc/VMC.gif"/>
+<img src="Doc/VMC_V4.gif"/>
 
 par default
 couleur = white,yellow,orange,red
