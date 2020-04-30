@@ -15,3 +15,7 @@ mode avancé (valeur à configurer en paramètres optionnels
 ### Paramètres Optionnels
 
 <img src="Doc/config.png"/>
+
+### Exemples mise en place
+
+https://youtu.be/l02K5fm2Uqw
