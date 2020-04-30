@@ -8,4 +8,8 @@ Mise à jour :
 
 <img src="doc/action_input_date.gif"/>
 
+### Exemples mise en place
+
+https://youtu.be/l02K5fm2Uqw
+
 
