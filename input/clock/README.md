@@ -49,3 +49,7 @@ ou
 [2020-03-16 00:07:23][SCENARIO] Tâche : 6 programmée à : 2020-03-16 11:24:00
 [2020-03-16 00:07:23][SCENARIO] Fin correcte du scénario
 ```
+
+### Exemples mise en place
+
+https://youtu.be/l02K5fm2Uqw
