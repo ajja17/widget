@@ -16,4 +16,8 @@ https://youtu.be/6Y_U8OSmTd4
 screen de configuration
 <img src="curseur input numb.png"/>
 
+### Exemples mise en place
+
+https://youtu.be/l02K5fm2Uqw
+
 
