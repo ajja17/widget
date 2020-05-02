@@ -7,7 +7,7 @@ avec un effet annimation
 Mise à jour :
 - Le 2020/5/3 : conforme jeedom v4.0.52
 
-<img src="doc/action_input_checkbox.gif"/>
+<img src="doc/action_input_chec.gif"/>
 
 screen de configuration
 <img src="doc/curseur input checkbox.png"/>
