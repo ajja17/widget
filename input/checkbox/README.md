@@ -10,7 +10,7 @@ Mise à jour :
 <img src="doc/action_input_chec.gif"/>
 
 screen de configuration
-<img src="doc/curseur input checkbox.png"/>
+<img src="doc/image.png"/>
 
 ### Exemples mise en place
 
