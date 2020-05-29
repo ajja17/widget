@@ -26,7 +26,7 @@ pour les 2 actions "On et Off"
 
 <img src="doc/toggle_switch_binaire_commandes_configuration_avance.png"/>
 
-couleurs : hexa, rgb, nom.
+couleurs acceptés : hexa, rgb, nom.
 + le 2éme prends les gradients
 exemple en valeur :
 <code>linear-gradient(to left, #bdc3c7, #2c3e50)</code>
