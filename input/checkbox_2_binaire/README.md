@@ -7,12 +7,21 @@ avec un effet annimation.
 Mise à jour :
 - Le 2020/5/30 : conforme jeedom v4.0.56
 
-2 modéles
+2 modéles (sans changement "voir plus bas" couleur etat3)
+
 
 <img src="doc/toggle_switch_binaire.png"/>
 
+
 screen de création commande
+
+
 <img src="doc/toggle_switch_binaire_commandes.png"/>
 
+
+
 screen de configuration avancé (changement de couleur)
+
+
+
 <img src="doc/toggle_switch_binaire_commandes_configuration_avance.png"/>
