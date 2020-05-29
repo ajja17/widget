@@ -21,7 +21,12 @@ screen de création commande
 
 
 screen de configuration avancé (changement de couleur)
-
+pour les 2 actions "On et Off"
 
 
 <img src="doc/toggle_switch_binaire_commandes_configuration_avance.png"/>
+
+couleurs : hexa, rgb, nom.
++ le 2éme prends les gradients
+
+linear-gradient(to right, #33ccff 0%, #0033cc 100%)
