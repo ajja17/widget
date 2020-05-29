@@ -29,4 +29,3 @@ pour les 2 actions "On et Off"
 couleurs : hexa, rgb, nom.
 + le 2éme prends les gradients
 
-linear-gradient(to right, #33ccff 0%, #0033cc 100%)
