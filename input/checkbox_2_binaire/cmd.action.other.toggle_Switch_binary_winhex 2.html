@@ -1,0 +1,94 @@
+<div style="width:90px;min-height:32px;" class="cursor cmd cmd-widget container-fluid" data-type="action" data-cmd_id="#id#" data-cmd_uid="#uid#">
+<center>
+  	<div class="title #hide_name#">
+		<div class="cmdName">#name_display#</div>
+	</div>  <label class="switch">
+      <input type="checkbox" id="check#id#" onchange="jeedom.cmd.execute({id: '#id#'});">
+      <div class="slider round"></div>
+   </label>
+</center>
+<style>
+  :root{ 
+--Round-color: #366AFF;    
+  }     
+.cmd[data-cmd_id="#id#"] .switch {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 24px;
+  top: 5px;
+}
+.cmd[data-cmd_id="#id#"] .switch input {display:none;}
+.cmd[data-cmd_id="#id#"] .slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+-webkit-transition: .4s;
+transition: .4s;
+background: #E9EBEF; /* fond  */
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+box-shadow: inset 3px 5px 11px rgba(0, 0, 0, 0.107599), inset -3px -5px 11px rgba(255, 255, 255, 0.5);
+border-radius: 30px;
+}
+.cmd[data-cmd_id="#id#"] .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 1px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.cmd[data-cmd_id="#id#"] input:checked + .slider:before {
+-webkit-transform: translateX(20px);
+-ms-transform: translateX(20px);
+transform: translateX(20px);
+/*background: #366AFF;  boule bleu On */ 
+ background: var(--Round-color);
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+box-shadow: 4px 4px 10px rgba(35, 67, 157, 0.523246), -4px -4px 10px #FFFFFF;
+}
+.cmd[data-cmd_id="#id#"] .slider.round { border-radius: 20px;}
+.cmd[data-cmd_id="#id#"] .slider.round:before {
+  border-radius: 50%;
+background: #C3C6CB; /* boule bleu Off */
+box-shadow: 4px 4px 10px rgba(169, 169, 169, 0.499372), -4px -4px 10px rgba(255, 255, 255, 0.604103);
+}
+</style>
+<script>
+  jeedom.cmd.update['#id#'] = function(_options){
+    var cmd = $('.cmd[data-cmd_id=#id#]');
+ 
+testcolor = ("#couleur#" == '#'+'couleur#');
+	if (testcolor != true) {
+
+  $('.cmd[data-cmd_id=#id#] .slider').css({'--Round-color': '#couleur#' });
+    }                                            
+
+   /* var ArrowColor1#id# = ('#ArrowColor1#' !='#'+'ArrowColor1#') ? "#ArrowColor1#":"rgb(128,128,128)";
+   */
+
+                                                 
+
+  if (_options.display_value == '1' || _options.display_value == 1 || _options.display_value == '99' || _options.display_value == 99 || _options.display_value == 'on') {     
+    document.getElementById('check#id#').checked = true;
+      if (jeedom.cmd.normalizeName('#name#') == 'on') {
+        cmd.hide();
+      }else{
+        cmd.show();
+      }} else {
+      document.getElementById('check#id#').checked = false;
+      if (jeedom.cmd.normalizeName('#name#') == 'off') {
+        cmd.hide();
+      }else{
+        cmd.show();
+      }		}	}
+	jeedom.cmd.update['#id#']({display_value:'#state#'});
+</script>
+</div>
