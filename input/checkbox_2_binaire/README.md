@@ -28,4 +28,5 @@ pour les 2 actions "On et Off"
 
 couleurs : hexa, rgb, nom.
 + le 2éme prends les gradients
-
+exemple en valeur :
+<code>linear-gradient(to left, #bdc3c7, #2c3e50)</code>
