@@ -7,7 +7,7 @@ avec un effet annimation.
 Mise à jour :
 - Le 2020/5/30 : conforme jeedom v4.0.56
 
-2 modéles (sans changement "voir plus bas" couleur etat3)
+2 modéles (sans changement de paramètres  "voir plus bas" couleur de base etat3)
 
 
 <img src="doc/toggle_switch_binaire.png"/>
