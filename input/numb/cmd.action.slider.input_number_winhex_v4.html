@@ -61,14 +61,14 @@ font-size: 26px;
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 $('.cmd[data-cmd_uid=#uid#] .execute').on("change", function () {
         jeedom.cmd.execute({id:'#id#', value: {
-slider: '"'+this.value+'"'
+          slider: parseFloat($(this).val())
         }});
                 });
              } else {
 $('.cmd[data-cmd_uid=#uid#]:last .execute').keypress(function( event ) {
            if(event.which == 13) {
 jeedom.cmd.execute({id:'#id#', value: {
-slider: '"'+this.value+'"'
+          slider: parseFloat($(this).val())
 }});
            }});
            }}  
