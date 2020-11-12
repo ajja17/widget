@@ -8,13 +8,13 @@
   color:green!important;
        }
 [data-cmd_id="#id#"].value { 
-right:30px;
+right:35px;
       border-radius: 12px!important;
     height: 30px!important;
-      width: 145px!important;
+      width: 155px!important;
     min-height: 30px!important;
     max-height: 30px!important;
-    font-size : 16px!important;
+    font-size : 15px!important;
     font-weight: Bold!important;
     text-align: left!important; 
     }   
@@ -23,12 +23,12 @@ right:30px;
         jeedom.cmd.update['#id#'] = function(_options){
     		$('#input#id#').val(_options.display_value);
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-$('.cmd[data-cmd_uid=#uid#] .execute').on("change", function () {
+$('.cmd[data-cmd_uid=#uid#] .execute').off("change").on("change", function () {  
         jeedom.cmd.execute({id:'#id#', value: {
            slider: '"'+this.value+'"'
         }});                });
              } else {
-$('.cmd[data-cmd_uid=#uid#]:last .execute').keypress(function( event ) {
+$('.cmd[data-cmd_uid=#uid#]:last .execute').off("keypress").keypress(function( event ) {  
            if(event.which == 13) {
 var test='"'+this.value+'"';
  jeedom.cmd.execute({id:'#id#', value: {
