@@ -1,4 +1,5 @@
 <div style="width:90px;min-height:70px;" class="cmd #history# tooltips cmd-widget" data-type="info" data-subtype="numeric" data-cmd_id="#id#" title="#collectDate#">
+    <!-- div style="font-weight: bold;font-size : 12px;">#name_display# -->
     <div class="title #hide_name#">
     <div class="cmdName">#name_display#</div>
   </div>
@@ -84,8 +85,8 @@ var couleur1#id# = (couleurListe[1]) ;
 var couleur2#id# = (couleurListe[2]) ; 
 var couleur3#id# = (couleurListe[3]) ;
 
-jeedom.cmd.update['#id#'] = function(_options){
-              			$('.cmd[data-cmd_id=#id#]').attr('title','Valeur du '+_options.valueDate+', collectée le '+_options.collectDate)
+         jeedom.cmd.addUpdateFunction('#id#',function(_options) {
+$('.cmd[data-cmd_id=#id#]').attr('title','Valeur du '+_options.valueDate+', collectée le '+_options.collectDate)
            
         var val = _options.display_value;
             if (val >= vit3#id#) {var anim = "0.3s"; var col = couleur3#id#;}   
@@ -96,8 +97,11 @@ jeedom.cmd.update['#id#'] = function(_options){
       $(".fan#id#").css({"-webkit-animation-duration": anim,"-moz-animation-duration": anim});   
  	 $(".col#id#").css('fill', col); 
    
- }
-		jeedom.cmd.update['#id#']({display_value:'#state#',valueDate:'#valueDate#',collectDate:'#collectDate#',alertLevel:'#alertLevel#'});
+ })
+                                      
+jeedom.cmd.refreshValue([{cmd_id :'#id#',display_value: '#state#', valueDate: '#valueDate#', collectDate: '#collectDate#', alertLevel: '#alertLevel#', unit: '#unite#'}])
+
+
     </script>
 
 </div>
