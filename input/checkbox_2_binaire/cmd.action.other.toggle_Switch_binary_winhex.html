@@ -10,7 +10,8 @@
 </center>
 <style>
   :root{ 
- --background-color: #94CA02;    
+ --background-color-on: #94CA02;    
+  --background-color-off: #a6a6a6;     
 }    
   .cmd[data-cmd_id="#id#"] .switch {
   position: relative;
@@ -28,9 +29,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+    background-color: var(--background-color-off);  
   -webkit-transition: .4s;
   transition: .4s;
+border: 1px solid #FFFFFF;
 }
 
   .cmd[data-cmd_id="#id#"] .slider:before {
@@ -39,15 +41,16 @@
   height: 20px;
   width: 20px;
   left: 2px;
-  bottom: 2px;
+  bottom: 1px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+
 }
 
 
   .cmd[data-cmd_id="#id#"] input:checked + .slider {
-  background-color: var(--background-color);
+  background-color: var(--background-color-on);
 }
 
   .cmd[data-cmd_id="#id#"] input:checked + .slider:before {
@@ -65,17 +68,21 @@
   .cmd[data-cmd_id="#id#"] .slider.round:before {
   border-radius: 50%;
 }
+
 </style>
 
 <script>
 
-  jeedom.cmd.update['#id#'] = function(_options){
+         jeedom.cmd.addUpdateFunction('#id#',function(_options) {
         var cmd = $('.cmd[data-cmd_id=#id#]');
     
     testcolor = ("#couleur#" == '#'+'couleur#');
 	if (testcolor != true) {
-
-  $('.cmd[data-cmd_id=#id#] .slider').css({'--background-color': '#couleur#' });
+$('.cmd[data-cmd_id=#id#] .slider').css({'--background-color-on': '#couleur#' });
+    }
+    testcolor_off = ("#couleur2#" == '#'+'couleur2#');
+	if (testcolor_off != true) {
+$('.cmd[data-cmd_id=#id#] .slider').css({'--background-color-off': '#couleur2#' });
     }
     
   if (_options.display_value == '1' || _options.display_value == 1 || _options.display_value == '99' || _options.display_value == 99 || _options.display_value == 'on') {document.getElementById('check#id#').checked = true;
@@ -92,8 +99,8 @@
           cmd.show();
       }
     }
-  }
-                jeedom.cmd.update['#id#']({display_value:'#state#'});
+  })
+jeedom.cmd.refreshValue([{cmd_id :'#id#',display_value: '#state#', valueDate: '#valueDate#', collectDate: '#collectDate#', alertLevel: '#alertLevel#'}])
 
 </script>
 </div>
