@@ -1,0 +1,42 @@
+<div class="tooltips cmd cmd-widget" data-type="action" data-subtype="slider" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" style="width:80px;">
+  <div class="input-group">
+<input id="input#id#" class="form-control input-sm value execute" type="date" data-cmd_id="#id#" required>
+</div>
+<style>
+[data-cmd_id="#id#"].form-control:not(.btn):not(.expressionAttr), [data-cmd_id="#id#"] input:not(.btn):not(.dial):not([type="radio"]):not([type="image"]):not(.expressionAttr):not(.knob):not([type="checkbox"]), textarea:not(.expressionAttr) {
+  background-color:#e4e2c2!important;
+  color:green!important;
+       }
+[data-cmd_id="#id#"].value { 
+right:35px;
+      border-radius: 12px!important;
+    height: 30px!important;
+      width: 155px!important;
+    min-height: 30px!important;
+    max-height: 30px!important;
+    font-size : 15px!important;
+    font-weight: Bold!important;
+    text-align: left!important; 
+    }   
+</style>
+	<script>
+         jeedom.cmd.addUpdateFunction('#id#',function(_options) {
+    		$('#input#id#').val(_options.display_value);
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+$('.cmd[data-cmd_uid=#uid#] .execute').off("change").on("change", function () {  
+        jeedom.cmd.execute({id:'#id#', value: {
+           slider: '"'+this.value+'"'
+        }});                });
+             } else {
+$('.cmd[data-cmd_uid=#uid#]:last .execute').off("keypress").keypress(function( event ) {  
+           if(event.which == 13) {
+var test='"'+this.value+'"';
+ jeedom.cmd.execute({id:'#id#', value: {
+   slider: '"'+this.value+'"'
+ }}); 
+             }});
+}
+})  
+jeedom.cmd.refreshValue([{cmd_id :'#id#',display_value: '#state#', valueDate: '#valueDate#', collectDate: '#collectDate#', alertLevel: '#alertLevel#'}])
+	</script>
+</div>
