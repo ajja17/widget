@@ -62,7 +62,7 @@ box-shadow: 4px 4px 10px rgba(169, 169, 169, 0.499372), -4px -4px 10px rgba(255,
 }
 </style>
 <script>
-  jeedom.cmd.update['#id#'] = function(_options){
+         jeedom.cmd.addUpdateFunction('#id#',function(_options) {
     var cmd = $('.cmd[data-cmd_id=#id#]');
  
 testcolor = ("#couleur#" == '#'+'couleur#');
@@ -88,7 +88,7 @@ testcolor = ("#couleur#" == '#'+'couleur#');
         cmd.hide();
       }else{
         cmd.show();
-      }		}	}
-	jeedom.cmd.update['#id#']({display_value:'#state#'});
+      }		}	})
+jeedom.cmd.refreshValue([{cmd_id :'#id#',display_value: '#state#', valueDate: '#valueDate#', collectDate: '#collectDate#', alertLevel: '#alertLevel#'}])
 </script>
 </div>
